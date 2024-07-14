@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="RobotoSlab-Bold.ttf">
+            <string>RobotoSlab-Bold</string>
+        </array>
+        <array key="RobotoSlab-Light.ttf">
+            <string>RobotoSlab-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="284" id="KGk-i7-Jjw" customClass="MovieListCell" customModule="MoviesListApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="448" height="284"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="448" height="284"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zXt-Ln-kAO">
+                        <rect key="frame" x="14" y="12" width="420" height="260"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K23-WS-Z4N">
+                                <rect key="frame" x="0.0" y="0.0" width="420" height="190"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="190" id="Xf8-To-nwQ"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DZ7-uA-8Tc">
+                                <rect key="frame" x="0.0" y="190" width="420" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="No Time To Die" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kk-9i-bKX">
+                                        <rect key="frame" x="16" y="10.000000000000002" width="332" height="18.666666666666671"/>
+                                        <fontDescription key="fontDescription" name="RobotoSlab-Bold" family="Roboto Slab" pointSize="16"/>
+                                        <color key="textColor" red="0.72941176470000002" green="0.72941176470000002" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Release Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xzr-uj-DYm">
+                                        <rect key="frame" x="16" y="36.666666666666657" width="71.333333333333329" height="14"/>
+                                        <fontDescription key="fontDescription" name="RobotoSlab-Light" family="Roboto Slab" pointSize="12"/>
+                                        <color key="textColor" red="0.72941176470000002" green="0.72941176470000002" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D8i-kf-SBe">
+                                        <rect key="frame" x="364" y="17" width="36" height="36"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="36" id="MjC-R5-VaV"/>
+                                            <constraint firstAttribute="height" constant="36" id="y47-3K-6OF"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <imageReference key="image" image="star" catalog="system"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="favoriteButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="wUG-RN-5LB"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="D8i-kf-SBe" firstAttribute="centerY" secondItem="DZ7-uA-8Tc" secondAttribute="centerY" id="B9A-MN-PQv"/>
+                                    <constraint firstItem="D8i-kf-SBe" firstAttribute="leading" secondItem="4kk-9i-bKX" secondAttribute="trailing" constant="16" id="BDt-Xq-Ywa"/>
+                                    <constraint firstItem="Xzr-uj-DYm" firstAttribute="leading" secondItem="4kk-9i-bKX" secondAttribute="leading" id="CUe-qP-G5Z"/>
+                                    <constraint firstItem="4kk-9i-bKX" firstAttribute="top" secondItem="DZ7-uA-8Tc" secondAttribute="top" constant="10" id="Df7-lW-1Rq"/>
+                                    <constraint firstAttribute="height" constant="70" id="Lgx-NS-lGp"/>
+                                    <constraint firstItem="Xzr-uj-DYm" firstAttribute="top" secondItem="4kk-9i-bKX" secondAttribute="bottom" constant="8" id="fgZ-gi-kI5"/>
+                                    <constraint firstAttribute="trailing" secondItem="D8i-kf-SBe" secondAttribute="trailing" constant="20" id="kdD-L4-Ec9"/>
+                                    <constraint firstItem="4kk-9i-bKX" firstAttribute="leading" secondItem="DZ7-uA-8Tc" secondAttribute="leading" constant="16" id="lSa-Nd-iTG"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DZ7-uA-8Tc" firstAttribute="top" secondItem="K23-WS-Z4N" secondAttribute="bottom" id="9Pn-iw-fIt"/>
+                            <constraint firstAttribute="trailing" secondItem="DZ7-uA-8Tc" secondAttribute="trailing" id="DeQ-bl-64G"/>
+                            <constraint firstAttribute="bottom" secondItem="DZ7-uA-8Tc" secondAttribute="bottom" priority="250" id="IZy-jK-yHW"/>
+                            <constraint firstItem="DZ7-uA-8Tc" firstAttribute="leading" secondItem="zXt-Ln-kAO" secondAttribute="leading" id="T8C-SQ-VAW"/>
+                            <constraint firstItem="K23-WS-Z4N" firstAttribute="leading" secondItem="zXt-Ln-kAO" secondAttribute="leading" id="bCe-g6-Jny"/>
+                            <constraint firstItem="K23-WS-Z4N" firstAttribute="top" secondItem="zXt-Ln-kAO" secondAttribute="top" id="eAN-dc-hep"/>
+                            <constraint firstAttribute="trailing" secondItem="K23-WS-Z4N" secondAttribute="trailing" id="zAd-Qn-MdL"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="zXt-Ln-kAO" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="IKU-4k-dSI"/>
+                    <constraint firstAttribute="trailing" secondItem="zXt-Ln-kAO" secondAttribute="trailing" constant="14" id="N3s-dZ-UcI"/>
+                    <constraint firstAttribute="bottom" secondItem="zXt-Ln-kAO" secondAttribute="bottom" constant="12" id="dkO-xB-yBv"/>
+                    <constraint firstItem="zXt-Ln-kAO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="14" id="kVs-8A-Bei"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="favoriteButton" destination="D8i-kf-SBe" id="zPG-xi-vYt"/>
+                <outlet property="posterImageView" destination="K23-WS-Z4N" id="geQ-fK-eVh"/>
+                <outlet property="releaseDateLabel" destination="Xzr-uj-DYm" id="Mq4-zv-0fi"/>
+                <outlet property="titleLabel" destination="4kk-9i-bKX" id="BOK-Qf-sVH"/>
+            </connections>
+            <point key="canvasLocation" x="105.34351145038167" y="107.74647887323944"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="star" catalog="system" width="128" height="116"/>
+    </resources>
+</document>
